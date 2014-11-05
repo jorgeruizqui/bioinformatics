@@ -304,7 +304,7 @@ public class OrigCTest {
 	 * 
 	 * PatternCount(Text, Pattern)
 	 *       count = 0
-	 *       for i = 0 to |Text| − |Pattern|
+	 *       for i = 0 to |Text| âˆ’ |Pattern|
 	 *           if Text(i, |Pattern|) = Pattern
 	 *               count = count + 1
 	 *       return count
@@ -340,12 +340,12 @@ public class OrigCTest {
 	/**
 	 * Implementation of frequent words algorithm
 	 * FrequentWords(Text, k)
-     *   FrequentPatterns ← an empty set
-     *   for i ← 0 to |Text| − k
-     *       Pattern ← the k-mer Text(i, k)
-     *       Count(i) ← PatternCount(Text, Pattern)
-     *   maxCount ← maximum value in array Count
-     *   for i ← 0 to |Text| − k
+     *   FrequentPatterns â†� an empty set
+     *   for i â†� 0 to |Text| âˆ’ k
+     *       Pattern â†� the k-mer Text(i, k)
+     *       Count(i) â†� PatternCount(Text, Pattern)
+     *   maxCount â†� maximum value in array Count
+     *   for i â†� 0 to |Text| âˆ’ k
      *       if Count(i) = maxCount
      *           add Text(i, k) to FrequentPatterns
      *   remove duplicates from FrequentPatterns
@@ -440,7 +440,7 @@ public class OrigCTest {
 	 * @param pattern To be used as initial stream
 	 * @return The reverse complement of pattern
 	 */
-	private String reverseComplementPattern(String pattern) {
+	public static String reverseComplementPattern(String pattern) {
 		Map<String, String> complements = new HashMap<String, String>();
 		complements.put("A", "T");
 		complements.put("T", "A");
